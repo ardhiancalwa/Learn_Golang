@@ -1,20 +1,18 @@
-package main
-import "fmt"
+	package main
+	import "fmt"
 
-func main()  {
-	var i, jam, menit, jumJam, jumMenit int
+	func main()  {
+		var i, jam, menit, jumJam, jumMenit int
 
-	i = 1
-	for {
 		fmt.Scan(&jam, &menit)
-		jumJam += jam
-		jumMenit += menit 
-		jumJam += jumMenit / 60
-		jumMenit %= 60
-		i++
-		if jam == 0 && menit == 0 {
-			break
+		i = 0
+		for jam != 0 && menit != 0 {
+			jumJam += jam
+			jumMenit += menit 
+			jumJam += jumMenit / 60
+			jumMenit %= 60
+			i++
+			fmt.Scan(&jam, &menit)
 		}
+		fmt.Println(jumJam, jumMenit)
 	}
-	fmt.Println(jumJam, jumMenit)
-}

@@ -4,13 +4,11 @@ import "fmt"
 func main()  {
 	var bilangan, jumlah int
 
+	fmt.Scan(&bilangan)
 	jumlah = 0
-	for {
-		fmt.Scan(&bilangan)
-		if bilangan < 0 {
-			break
-		}
+	for bilangan >= 0 {
 		jumlah += bilangan
+		fmt.Scan(&bilangan)
 	}
 	fmt.Println(jumlah)
 	

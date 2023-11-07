@@ -3,12 +3,13 @@ import "fmt"
 
 func main()  {
 	var jumGol, gol, i int
-	jumGol = 0
-	gol = 0
+	var hadiah bool
 	fmt.Scan(&gol)
-	for i = 1; i <= 30 && gol != -1; i++ {
+	jumGol = 0
+	for i = 1; gol >= 10 || gol != -1; i++ {
 		jumGol += gol 
 		fmt.Scan(&gol)
 	}
-	fmt.Println(jumGol >= 10)
+	hadiah = jumGol >= 10
+	fmt.Println(hadiah)
 }	

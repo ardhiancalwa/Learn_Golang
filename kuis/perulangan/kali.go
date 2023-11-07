@@ -7,11 +7,8 @@ func main()  {
 	fmt.Scan(&n)
 	jumlah = 1
 	i = 1
-	for {
+	for i <= n {
 		fmt.Scan(&bilangan)
-		if i > n  {
-			break
-		}
 		jumlah *= bilangan
 		i++
 	}

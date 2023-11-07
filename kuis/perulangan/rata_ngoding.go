@@ -11,8 +11,8 @@ func main()  {
 	for jam >= 0{
 		totalJam += jam
 		n++
-		rata_rata = float64(totalJam) / float64(n)
 		fmt.Scan(&jam)
 	}
+	rata_rata = float64(totalJam) / float64(n)
 	fmt.Printf("%.2f", rata_rata)
 }

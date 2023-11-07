@@ -5,16 +5,15 @@ func main() {
 	var i, bilangan, bilanganAkhir, banyak int
 
 	i = 0
-	for i < 10 {
+	banyak = 0
+	for {
 		fmt.Scan(&bilangan)
-		if i == 0 || bilangan <= bilanganAkhir {
-			bilanganAkhir = bilangan
-			banyak++
-		} else {
+		if i >= 10 || (i > 0 && bilangan > bilanganAkhir) {
 			break
 		}
+		bilanganAkhir = bilangan
+		banyak++
 		i++
 	}
-
 	fmt.Println(banyak)
 }

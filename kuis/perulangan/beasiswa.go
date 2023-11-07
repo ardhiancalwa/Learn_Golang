@@ -4,13 +4,10 @@ import "fmt"
 func main()  {
 	var beasiswa string
 	
-	for {
+	fmt.Scan(&beasiswa)
+	for beasiswa != "ada" {
+		fmt.Println("cari beasiswa")
 		fmt.Scan(&beasiswa)
-		if beasiswa == "belum" {
-			fmt.Println("cari beasiswa")
-		} else if beasiswa == "ada" {
-			fmt.Println("pencarian selesai")
-			break
-		}
 	}
+	fmt.Println("pencarian selesai")
 }
