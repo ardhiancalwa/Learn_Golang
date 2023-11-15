@@ -2,18 +2,18 @@ package main
 import "fmt"
 
 func main()  {
-	var i, n, hari, postingan, jumHari, jumPost int
+	var i, n, hari, postingan, text, gambar int
 
 	fmt.Scan(&n)
-	jumHari = 0
-	jumPost = 0
+	text = 0
+	gambar = 0
 	i = 1
 	for i <= n {
 		fmt.Scan(&hari)
-		jumHari += hari
+		text += hari
 		fmt.Scan(&postingan)
-		jumPost += postingan
+		gambar += postingan
 		i++
 	}
-	fmt.Println(jumHari, jumPost)
+	fmt.Println(text, gambar)
 }

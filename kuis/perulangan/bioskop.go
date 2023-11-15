@@ -9,8 +9,6 @@
 		for jam != 0 && menit != 0 {
 			jumJam += jam
 			jumMenit += menit 
-			jumJam += jumMenit / 60
-			jumMenit %= 60
 			i++
 			fmt.Scan(&jam, &menit)
 		}
