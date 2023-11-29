@@ -9,7 +9,7 @@ func main()  {
 		denda = hari * 2500
 		fmt.Println(denda)
 	} else {
-		denda = hari * 5000
+		denda = 25000 + (hari * 10) * 5000
 		fmt.Println(denda)
 	}
 }
