@@ -1,7 +1,8 @@
 package main
+
 import "fmt"
 
-func main()  {
+func main() {
 	var jabatan string
 	var masaKerja, jumAnak, gaji_pokok int
 
@@ -21,7 +22,7 @@ func main()  {
 		}
 	}
 
-	if jabatan == "Manajer" {
+	if jabatan == "Manager" {
 		if masaKerja > 10 {
 			gaji_pokok += 10000
 			jumAnak *= 300
@@ -36,5 +37,5 @@ func main()  {
 		jumAnak *= 500
 	}
 
-	fmt.Println(gaji_pokok, "+", jumAnak, "=",gaji_pokok + jumAnak)
+	fmt.Println(gaji_pokok, "+", jumAnak, "=", gaji_pokok+jumAnak)
 }
