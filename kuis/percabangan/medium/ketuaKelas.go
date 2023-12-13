@@ -8,6 +8,7 @@ func main()  {
 	
 	fmt.Scan(&jumSiswa, &jumA, &jumB)
 	minimal = jumSiswa - (jumSiswa * 60/100)
+	fmt.Println(minimal)
 	if minimal <= (jumA+jumB) && jumA > jumB {
 		fmt.Println("Kandidat A menang")
 	} else if minimal <= (jumA+jumB) && jumB > jumA{

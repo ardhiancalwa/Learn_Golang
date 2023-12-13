@@ -24,3 +24,21 @@ algoritma
     else {
         output("tidak lolos")
     }
+
+// kuis medium
+// Medium no. 1
+program swalayan
+kamus 
+    p1, p2, p3, p4, p5 : integer
+algoritma 
+    input(p1, p2, p3, p4, p5)
+    if (p1+p2+p3) == (p3+p4+p5) && (p2+p3+p4) % (p1+p5) == 0 then
+        output("cashback")
+        output("diskon")
+    else if (p1+p2+p3) == (p3+p4+p5) then
+        output("cashback")
+    else if (p2+p3+p4) % (p1+p5) == 0 then
+        output("diskon")
+    else 
+        output(" ")
+endprogram

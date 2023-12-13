@@ -2,50 +2,23 @@ package main
 import "fmt"
 
 func main() {
-	var unit, biaya, jumBayar int
-	var tambahan float64
+	var unit, biayaTotal float64
 
 	fmt.Scan(&unit)
 	if unit < 200 {
-		biaya = 12
-			if unit*biaya > 400 {
-				tambahan = float64(0.2) * float64(unit) * float64(biaya)
-				jumBayar = (unit * biaya) + int(tambahan)
-			} else if unit * biaya < 100 {
-				jumBayar = 100
-			} else {
-				jumBayar = unit * biaya
-			}
+		biayaTotal = unit * 12
 	} else if unit >= 200 && unit < 400 {
-		biaya = 15
-			if unit*biaya > 400 {
-				tambahan = float64(0.2) * float64(unit) * float64(biaya)
-				jumBayar = (unit * biaya) + int(tambahan)
-			} else if unit * biaya < 100 {
-				jumBayar = 100
-			} else {
-				jumBayar = unit * biaya
-			}
+		biayaTotal = unit * 15
 	} else if unit >= 400 && unit < 600 {
-		biaya = 18
-			if unit*biaya > 400 {
-				tambahan = float64(0.2) * float64(unit) * float64(biaya)
-				jumBayar = (unit * biaya) + int(tambahan)
-			} else if unit * biaya < 100 {
-				jumBayar = 100
-			} else {
-				jumBayar = unit * biaya
-			}
-	} else {
-		biaya = 20
-			if unit*biaya > 400 {
-				tambahan = float64(0.2) * float64(unit) * float64(biaya)
-				jumBayar = (unit * biaya) + int(tambahan)
-			} else if unit * biaya < 100 {
-				jumBayar = 100
-			} else {
-				jumBayar = unit * biaya
-			}
+		biayaTotal = unit * 18
+	} else if unit >= 600 {
+		biayaTotal = unit * 20
 	}
-	fmt.Println(jumBayar)
+
+	if biayaTotal > 400 {
+		biayaTotal += biayaTotal * 0.2
+	} else if biayaTotal < 100 {
+		biayaTotal = 100
+	}
+	fmt.Println(biayaTotal)
 }

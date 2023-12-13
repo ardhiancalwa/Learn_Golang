@@ -7,7 +7,7 @@ func main()  {
 	var jadiNonton bool
 
 	fmt.Scan(&hariKerja, &jamNonton, &genreAksi)
-	if hariKerja && jamNonton >= 19  && genreAksi {
+	if hariKerja && jamNonton > 19  && genreAksi {
 		jadiNonton = true
 	} else {
 		jadiNonton = false

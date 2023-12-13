@@ -7,12 +7,12 @@ func main()  {
 	fmt.Scan(&n)
 	jumlah = 0
 	if n == 4 {
-		for i := 1; i <= 4; i++ {
+		for i := 1; i <= n; i++ {
 			fmt.Scan(&uang)
 			jumlah += uang
 		}
 	} else if n == 5 {
-		for i := 1; i <= 5; i++ {
+		for i := 1; i <= n; i++ {
 			fmt.Scan(&uang)
 			jumlah += uang
 		}

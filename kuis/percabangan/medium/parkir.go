@@ -12,8 +12,7 @@ func main()  {
 		tarifAwal = 3000
 		tarifBerikutnya = 1000
 	}
-
-	if lama > 0 {
+	if lama > 1 {
 		totTarif = tarifAwal + tarifBerikutnya * (lama-1)
 	}
 	fmt.Println(totTarif)
