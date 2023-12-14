@@ -1,55 +1,70 @@
 package main
+
 import "fmt"
-func main()  {
-	var a, b, c, d, u1, u2, u3, u4 int
-	var maxAB, minAB, maxCD, minCD int
-	var temp int
+
+func main() {
+	var b1, b2, b3, b4, max, min int
 	var mean, median float64
 
-	fmt.Scan(&a, &b, &c, &d)
-	mean = float64(a+b+c+d)/4
-	if a >= b {
-		maxAB = a
-		minAB = b
+	fmt.Scan(&b1, &b2, &b3, &b4)
+	mean = float64(b1+b2+b3+b4) / 4
+	max = b1
+	if b2 >= max {
+		max = b2
 	} else {
-		maxAB = b
-		minAB = a
+		max = max
 	}
-	if c >= d {
-		maxCD = c
-		maxCD = d
+	if b3 >= max {
+		max = b3
 	} else {
-		maxCD = d
-		maxCD = c
+		max = max
 	}
-	if maxAB >= maxCD {
-		u4 = maxAB
-		u3 = maxCD
+	if b4 >= max {
+		max = b4
 	} else {
-		u4 = maxCD
-		u3 = maxAB
+		max = max
 	}
-	if minAB <= minCD {
-		u1 = minAB
-		u2 = minCD
+
+	min = b1
+	if b2 <= min {
+		min = b2
 	} else {
-		u1 = minCD
-		u2 = minAB
+		min = min
 	}
-	if u3 <= u2 {
-		temp = u3
-		u3 = u2
-		u2 = temp
-	}
-	median = float64(u2+u3)/2
-	fmt.Println(u1, u4)
-	fmt.Println(u1, u2, u3, u4)
-	fmt.Println(mean, median)
-	if mean == median {
-		fmt.Println("simetris")
-	} else if mean > median {
-		fmt.Println("skew kanan")
+	if b3 <= min {
+		min = b3
 	} else {
-		fmt.Println("skew kiri")
+		min = min
 	}
+	if b4 <= min {
+		min = b4
+	} else {
+		min = min
+	}
+	fmt.Println(min, max)
+
+	if b2 >= b3 {
+		fmt.Println(min, b3, b2, max)
+		median = float64(b3+b2) / 2
+		fmt.Println(mean, median)
+		if mean == median {
+			fmt.Println("simetris")
+		} else if mean >= median {
+			fmt.Println("skew kanan")
+		} else if mean <= median {
+			fmt.Println("skew kiri")
+		}
+	} else if b3 >= b2 {
+		fmt.Println(min, b2, b3, max)
+		median = float64(b2+b3) / 2
+		fmt.Println(mean, median)
+		if mean == median {
+			fmt.Println("simetris")
+		} else if mean >= median {
+			fmt.Println("skew kanan")
+		} else if mean <= median {
+			fmt.Println("skew kiri")
+		}
+	}
+
 }
