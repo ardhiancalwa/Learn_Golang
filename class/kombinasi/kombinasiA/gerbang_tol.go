@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var tipe rune
+	var tipe byte
 	var A, B, C int
 
 	fmt.Scanf("%c", &tipe)
