@@ -10,10 +10,12 @@ func main() {
 	if bil <= 1 {
 		prima = false
 	} else {
-		for i = 2; i*i <= bil; i++ {
+		i = 2
+		for i*i <= bil {
 			if bil%i == 0 {
 				prima = false
 			}
+			i++
 		}
 	}
 	fmt.Println(prima)

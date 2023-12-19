@@ -13,7 +13,7 @@ func main() {
 			if digit == x {
 				nilai = true
 			}
-			n = n / 10
+			n /= 10
 		}
 	} else {
 		nilai = false

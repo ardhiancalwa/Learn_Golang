@@ -3,27 +3,26 @@ package main
 import "fmt"
 
 func main() {
-	var suhu, terendah, tertinggi, stop, n, rata int
+	var suhu, stop, n, rata, max, min int
 	var jumRata float64
-
-	for {
-		fmt.Scan(&suhu)
-		if suhu == 0 && stop == 0 {
-			break
-		}
-		n++
-		if n == 1 {
-			tertinggi = suhu
-			terendah = suhu
-		} else if suhu < terendah {
-			terendah = suhu
-		} else if suhu > tertinggi {
-			tertinggi = suhu
-		}
-
-		rata += suhu
-		jumRata = float64(rata) / float64(n)
+	stop = 1
+	n = 0
+	max = 0
+	min = 0
+	for suhu+stop != 0 {
 		stop = suhu
+		fmt.Scan(&suhu)
+		n++
+		rata += suhu
+		if suhu > max {
+			max = suhu
+		}
+		if suhu < min {
+			min = suhu
+		}
 	}
-	fmt.Println(tertinggi, terendah, jumRata)
+	jumRata = float64(rata) / float64(n-1)
+	fmt.Println(max)
+	fmt.Println(min)
+	fmt.Println(jumRata)
 }

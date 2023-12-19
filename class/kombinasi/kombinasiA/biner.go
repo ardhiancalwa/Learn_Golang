@@ -7,7 +7,7 @@ func main() {
 	var  hasil string
 	fmt.Scan(&bil)
 
-	for bil != 0{
+	for bil > 0 {
 		digit = bil % 2
 		if digit == 0 {
 			hasil = "0" + hasil
