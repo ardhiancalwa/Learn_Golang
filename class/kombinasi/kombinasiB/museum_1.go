@@ -20,5 +20,6 @@ func main() {
 		hari = 1
 	}
 	rata = float64(jumPengunjung)/float64(hari)
-	fmt.Println(kenaikan, rata)
+	fmt.Println(kenaikan)
+	fmt.Printf("%.2f",rata)
 }
