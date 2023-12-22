@@ -3,33 +3,30 @@ package main
 import "fmt"
 
 func main() {
-	var bil, digit, digitAfter int
-	var status string
+	var bilBul, digitBefore, jumDigit, naik, turun int
+	var bil float64
 
 	fmt.Scan(&bil)
-	status = "tidak terurut"
-
-	for bil > 0 {
-		digitAfter = digit
-		digit = bil % 10
-
-		if digitAfter != 0 {
-			if digit < digitAfter {
-				if status == "descending" {
-					status = "tidak terurut"
-					break
-				}
-				status = "ascending"
-			} else if digit > digitAfter {
-				if status == "ascending" {
-					status = "tidak terurut"
-					break
-				}
-				status = "descending"
-			}
+	bilBul = int(bil)
+	digitBefore = bilBul%10
+	bilBul /= 10
+	for bilBul > 0 {
+		jumDigit++
+		if bilBul%10 < digitBefore {
+			naik++
+		} else if bilBul%10 > digitBefore {
+			turun++
 		}
-		bil /= 10
+		digitBefore = bilBul%10
+		bilBul /= 10
+	}
+	if naik == jumDigit {
+		fmt.Println("ascending")
+	} else if turun == jumDigit {
+		fmt.Println("descending")
+	} else {
+		fmt.Println("tidak terurut")
 	}
 
-	fmt.Println(status)
+	fmt.Println(naik, turun)
 }

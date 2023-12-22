@@ -5,9 +5,14 @@ import "fmt"
 func main() {
 	var A, B, i int
 	var tim byte
+	var stop bool
 
-	for i = 1; i <= 10; i++ {
-		fmt.Scanf("%c", &tim)
+	fmt.Scanf("%c", &tim)
+	A = 1
+	B = 1
+	stop = false
+	i = 1
+	for  i <= 10 && !stop {
 		if tim == 'A'{
 			A++
 		}
@@ -15,8 +20,9 @@ func main() {
             B++
         }
 		if A == 4 || B == 4 {
-			break
+			stop = true
 		}
+		i++
 		fmt.Scanf("%c", &tim)
 	}
 	fmt.Println(A, B)
