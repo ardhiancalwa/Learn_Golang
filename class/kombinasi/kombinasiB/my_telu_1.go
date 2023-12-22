@@ -4,9 +4,8 @@ import "fmt"
 
 func main() {
 	var poin int
-	var newUser bool
-
-	fmt.Scan(&poin, &newUser)
+	
+	fmt.Scan(&poin)
 	if poin > 200 {
 		fmt.Println("Gold User")
 	} else if poin >= 100 {

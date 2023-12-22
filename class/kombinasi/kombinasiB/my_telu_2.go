@@ -4,11 +4,10 @@ import "fmt"
 
 func main() {
 	var poin int
-	var newUser bool
 
-	fmt.Scan(&poin, &newUser)
+	fmt.Scan(&poin)
 	for poin < 50 {
-		fmt.Scan(&poin, &newUser)
+		fmt.Scan(&poin)
 	}
 	if poin > 200 {
 		fmt.Println("Gold User")
