@@ -92,7 +92,4 @@ func main() {
 	fmt.Println("Gold: ", rataGold)
 	fmt.Println("Platinum: ", rataPlatinum)
 	fmt.Println("Silver: ", rataSilver)
-
-	fmt.Println(poinGold, gold)
-	
 }
