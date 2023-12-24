@@ -4,19 +4,21 @@ import "fmt"
 
 func main() {
 	var kendaraan byte
-	var bayar, jumBayarM, jumBayarB  int
+	var bayar, jumBayarM, jumBayarB int
 
-	fmt.Scanf("%c", &kendaraan)
+	fmt.Scanf("%c %d\n", &kendaraan, &bayar)
 
-	if kendaraan != 'x' {
+	jumBayarB = 0
+	jumBayarM = 0
+
+	for kendaraan != 'x' && bayar != 0 {
 		if kendaraan == 'm' {
-			fmt.Scan(&bayar)
 			jumBayarM += bayar
-		} else if kendaraan == 'b' {
-			fmt.Scan(&bayar)
-            jumBayarB += bayar
+		} 
+		if kendaraan == 'b' {
+			jumBayarB += bayar
 		}
-		fmt.S
+		fmt.Scanf("%c %d\n",&kendaraan, &bayar)
 	}
-	
+	fmt.Println(jumBayarB, jumBayarM)
 }

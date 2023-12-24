@@ -17,5 +17,5 @@ func main() {
 		jumPengunjung += pengunjung
 		hari++
 	}
-	fmt.Println(jumPengunjung)
+	fmt.Println("Jumlah pengunjung :", jumPengunjung)
 }
