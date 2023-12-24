@@ -13,24 +13,32 @@ func main() {
 		fmt.Scan(&suara)
 		if suara == "JA" {
             JA = true
-        } 
+        } else {
+			JA = false
+		}
 		if suara == "BE" {
 			BE = true
-		} 
+		} else {
+			BE = false
+		}
 		if suara == "CI" {
 			CI = true
-		} 
+		} else {
+			CI = false
+		}
 		if suara == "JE" {
 			JE = true
-		} 
+		} else {
+			JE = false
+		}
 		if suara == "LO" {
 			LO = true
-		} 
+		} else {
+			LO = false
+		}
 	}
 
-	fmt.Println(JA, BE, CI, JE, LO)
-
-	if JA && BE && CI && JE && LO {
+	if JA == true && BE == true && CI == true && JE == true && LO == true {
 		lima_suara = true
 	} else {
 		lima_suara = false
