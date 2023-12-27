@@ -4,44 +4,29 @@ import "fmt"
 
 func main() {
 	var suara string
-	var i, n int
+	var i, hari int
 	var lima_suara bool
 	var JA, BE, CI, JE, LO bool
 
-	fmt.Scan(&n)
-	for i = 1; i <= n; i++ {
+	fmt.Scan(&hari)
+	for i = 1; i <= hari; i++ {
 		fmt.Scan(&suara)
 		if suara == "JA" {
-            JA = true
-        } else {
-			JA = false
-		}
-		if suara == "BE" {
+			JA = true
+		} else if suara == "BE" {
 			BE = true
-		} else {
-			BE = false
-		}
-		if suara == "CI" {
+		} else if suara == "CI" {
 			CI = true
-		} else {
-			CI = false
-		}
-		if suara == "JE" {
+		} else if suara == "JE" {
 			JE = true
-		} else {
-			JE = false
-		}
-		if suara == "LO" {
+		} else if suara == "LO" {
 			LO = true
-		} else {
-			LO = false
 		}
 	}
-
-	if JA == true && BE == true && CI == true && JE == true && LO == true {
-		lima_suara = true
-	} else {
-		lima_suara = false
-	}
+	if JA && BE && CI && JE && LO {
+        lima_suara = true
+    } else {
+        lima_suara = false
+    }
 	fmt.Println(lima_suara)
 }

@@ -8,17 +8,14 @@ func main() {
 	const hari int = 30
 
 	fmt.Scan(&P, &S, &X, &Y, &B)
-	for j := 1; j <= hari; j++ {
-		if j%X == 0 || j%Y == 0 {
-			jumP += 0
-			jumS += 0
-		} else {
-			if j%2 == 0 {
+	for i := 1; i <= hari; i++ {
+		if i%X != 0 && i%Y != 0 {
+			if i%2 == 0 {
 				jumS += S
-			} else {
+			} else if i%2 != 0 {
 				jumP += P
 			}
-		}
+		} 
 	}
 	jumP *= B
 	jumS *= B
