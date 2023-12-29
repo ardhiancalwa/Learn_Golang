@@ -18,8 +18,8 @@ func main() {
 			B += 0.15
 		}
 		if i%3 == 0 {
-			A *= 0.95
+			A -= A * 0.05
 		}
 	}
-	fmt.Printf("%.15f %.1f", A, B)
+	fmt.Println(A, B)
 }

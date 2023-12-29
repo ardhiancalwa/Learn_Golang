@@ -11,24 +11,24 @@ func main() {
 	if b >= max {
 		max = b
 	} else {
-		max = max 
+		max = max
 	}
 	if c >= max {
-        max = c
-    } else {
-        max = max 
-    }
+		max = c
+	} else {
+		max = max
+	}
 	min = a
 	if b <= min {
 		min = b
 	} else {
-		min = min 
+		min = min
 	}
 	if c <= min {
-        min = c
-    } else {
-        min = min 
-    }
+		min = c
+	} else {
+		min = min
+	}
 	if a > min && a < max {
 		fmt.Println(max, a, min)
 	} else if b > min && b < max {
@@ -44,5 +44,5 @@ func main() {
 			fmt.Println(max, c, max)
 		}
 	}
-	
+
 }
